@@ -1,6 +1,6 @@
 package pattern.strategy;
 
-public class TestStrategy {
+public class TestArtist {
   public static void main(String[] args) {
     Artist artist = new Artist();
 
