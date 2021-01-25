@@ -3,7 +3,8 @@ package pattern.decorator;
 public class Computer {
 
   public static void main(String[] args) {
-    BIOS bios = new BIOS();
+    Computer computer = new Computer();
+    BIOS bios = new BIOS(computer);
     bios.startSystem();
 
     OperationSystem dos = new OperationSystemDOS(bios);
@@ -19,10 +20,8 @@ public class Computer {
     update.start();
     System.out.println("----------------------------------------");
     System.out.println("----------------------------------------");
-    Application ideaUpdater = new IntellijIdeaUpdaterApp(
-        new IntellijIdeaApp(
-            new OperationSystemWindows(
-                new OperationSystemDOS(new BIOS()))));
+    Application ideaUpdater = new IntellijIdeaUpdaterApp(new IntellijIdeaApp(
+            new OperationSystemWindows(new OperationSystemDOS(new BIOS(new Computer())))));
     ideaUpdater.start();
   }
 }

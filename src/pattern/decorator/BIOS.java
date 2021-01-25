@@ -1,7 +1,7 @@
 package pattern.decorator;
 
 public class BIOS implements OperationSystem{
-  public BIOS() {
+  public BIOS(Computer computer) {
     System.out.println("Load BIOS ...");
   }
 
