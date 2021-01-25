@@ -13,20 +13,19 @@ public class Computer {
 
     OperatingSystemWindows windows = new OperatingSystemWindows(dos);
     windows.startSystem();
-    windows.rebootSystem();
-
 
     Application intellijIdea = new IntellijIdeaApp(windows);
     intellijIdea.start();
     System.out.println("----------------------------------------");
     Application update = new IntellijIdeaUpdaterApp(intellijIdea);
     update.start();
+    windows.rebootSystem();
+    windows.shutdownSystem();
+
     System.out.println("----------------------------------------");
     System.out.println("----------------------------------------");
     Application ideaUpdater = new IntellijIdeaUpdaterApp(new IntellijIdeaApp(
-            new OperatingSystemWindows(new OperatingSystemDOS(new BIOS(new Computer())))));
+        new OperatingSystemWindows(new OperatingSystemDOS(new BIOS(new Computer())))));
     ideaUpdater.start();
-
-    windows.shutdownSystem();
   }
 }
