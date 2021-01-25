@@ -10,4 +10,8 @@ public class OperatingSystemDOS implements OperatingSystem {
   public void startSystem() {
     System.out.println("DOS was load.");
   }
+
+  public void dir() {
+    System.out.println("Printing list of directories");
+  }
 }

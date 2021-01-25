@@ -9,4 +9,12 @@ public class OperatingSystemWindows implements OperatingSystem {
   public void startSystem() {
     System.out.println("Windows was load");
   }
+
+  public void shutdownSystem() {
+    System.out.println("shutdown operating system");
+  }
+
+  public void rebootSystem() {
+    System.out.println("Windows was reboot");
+  }
 }
