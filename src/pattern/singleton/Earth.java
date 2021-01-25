@@ -1,8 +1,8 @@
-package singleton;
+package pattern.singleton;
 
 public class Earth {
 
-  private static volatile Earth earth;
+  private static volatile Earth earth; // volatile - для исключения кеширования в кеше процессора
 
   private Earth() {
   }
