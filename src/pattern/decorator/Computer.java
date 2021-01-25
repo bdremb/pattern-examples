@@ -15,7 +15,10 @@ public class Computer {
     Application intellijIdea = new IntellijIdeaApp(windows);
     intellijIdea.start();
     System.out.println("----------------------------------------");
-
+    Application update = new IntellijIdeaUpdaterApp(intellijIdea);
+    update.start();
+    System.out.println("----------------------------------------");
+    System.out.println("----------------------------------------");
     Application ideaUpdater = new IntellijIdeaUpdaterApp(
         new IntellijIdeaApp(
             new OperationSystemWindows(
