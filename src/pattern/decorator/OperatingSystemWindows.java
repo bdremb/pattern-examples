@@ -1,8 +1,8 @@
 package pattern.decorator;
 
-public class OperationSystemWindows implements OperationSystem {
+public class OperatingSystemWindows implements OperatingSystem {
 
-  public OperationSystemWindows(OperationSystem dos) {
+  public OperatingSystemWindows(OperatingSystem dos) {
     System.out.println("Loading Windows ...");
   }
 

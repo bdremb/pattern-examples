@@ -1,8 +1,8 @@
 package pattern.decorator;
 
-public class OperationSystemDOS implements OperationSystem{
+public class OperatingSystemDOS implements OperatingSystem {
 
-  public OperationSystemDOS(BIOS bios) {
+  public OperatingSystemDOS(BIOS bios) {
     System.out.println("Loading DOS ...");
   }
 

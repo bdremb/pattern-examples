@@ -1,5 +1,5 @@
 package pattern.decorator;
 
-public interface OperationSystem {
+public interface OperatingSystem {
   void startSystem();
 }

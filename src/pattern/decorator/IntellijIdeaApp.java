@@ -2,7 +2,7 @@ package pattern.decorator;
 
 public class IntellijIdeaApp implements Application {
 
-  public IntellijIdeaApp(OperationSystem operationSystem) {
+  public IntellijIdeaApp(OperatingSystem operatingSystem) {
     System.out.println("Loading IntellijIdea ...");
   }
 

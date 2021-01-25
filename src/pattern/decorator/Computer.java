@@ -7,10 +7,10 @@ public class Computer {
     BIOS bios = new BIOS(computer);
     bios.startSystem();
 
-    OperationSystem dos = new OperationSystemDOS(bios);
+    OperatingSystem dos = new OperatingSystemDOS(bios);
     dos.startSystem();
 
-    OperationSystem windows = new OperationSystemWindows(dos);
+    OperatingSystem windows = new OperatingSystemWindows(dos);
     windows.startSystem();
 
     Application intellijIdea = new IntellijIdeaApp(windows);
@@ -21,7 +21,7 @@ public class Computer {
     System.out.println("----------------------------------------");
     System.out.println("----------------------------------------");
     Application ideaUpdater = new IntellijIdeaUpdaterApp(new IntellijIdeaApp(
-            new OperationSystemWindows(new OperationSystemDOS(new BIOS(new Computer())))));
+            new OperatingSystemWindows(new OperatingSystemDOS(new BIOS(new Computer())))));
     ideaUpdater.start();
   }
 }
