@@ -4,13 +4,13 @@ public class Computer {
 
   public static void main(String[] args) {
     BIOS bios = new BIOS();
-    bios.start();
+    bios.startSystem();
 
     OperationSystem dos = new OperationSystemDOS(bios);
-    dos.start();
+    dos.startSystem();
 
     OperationSystem windows = new OperationSystemWindows(dos);
-    windows.start();
+    windows.startSystem();
 
     Application intellijIdea = new IntellijIdeaApp(windows);
     intellijIdea.start();

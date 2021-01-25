@@ -6,7 +6,7 @@ public class OperationSystemWindows implements OperationSystem {
     System.out.println("Loading Windows ...");
   }
 
-  public void start() {
+  public void startSystem() {
     System.out.println("Windows was load");
   }
 }

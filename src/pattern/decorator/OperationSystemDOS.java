@@ -7,7 +7,7 @@ public class OperationSystemDOS implements OperationSystem{
   }
 
   @Override
-  public void start() {
+  public void startSystem() {
     System.out.println("DOS was load.");
   }
 }
