@@ -15,24 +15,14 @@ public class Cake {
     private String milk;
     private String sugar;
     private String salt;
-    private int amount;
 
-    public Builder(int amount) {
-      this.amount = amount;
+    public Builder(int waterAmount, int flourAmount) {
+      water = "water-" + waterAmount;
+      flour = " flour-" + flourAmount;
     }
 
     public Builder egg(int amount) {
       egg = " egg-" + amount;
-      return this;
-    }
-
-    public Builder water(int amount) {
-      water = " water-" + amount;
-      return this;
-    }
-
-    public Builder flour(int amount) {
-      flour = " flour-" + amount;
       return this;
     }
 
@@ -56,8 +46,7 @@ public class Cake {
     }
   }
 
-
-  public Cake(Builder builder) {
+  private Cake(Builder builder) {
     egg = builder.egg;
     water = builder.water;
     flour = builder.flour;
@@ -69,9 +58,8 @@ public class Cake {
   @Override
   public String toString() {
     return "Cake with {"
+        + water + flour
         + (egg == null ? " " : egg)
-        + (water == null ? " " : water)
-        + (flour == null ? " " : flour)
         + (milk == null ? " " : milk)
         + (sugar == null ? " " : sugar)
         + (salt == null ? " " : salt) + '}';
